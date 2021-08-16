@@ -39,7 +39,7 @@ def alive():
         try:
             url = "https://app-d-wwkiyyx.cloud.okteto.net"
             print(datetime.datetime.now(), url)
-            print(urllib.request.urlopen().read().decode('utf-8'))
+            print(urllib.request.urlopen(url).read().decode('utf-8'))
         except Exception as ex:
             print(datetime.datetime.now(), ex)
         time.sleep(100)
