@@ -1,0 +1,5 @@
+services:
+  theiaide:
+    image: theiaide/theia
+    ports:
+      - 3000:3000
