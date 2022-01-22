@@ -1,5 +1,6 @@
 services:
-  theiaide:
-    image: theiaide/theia
+  code:
+    image: codercom/code-server
+    command: code-server --auth none --bind-addr 0.0.0.0:8080
     ports:
-      - 3000:3000
+      - 8080:8080
