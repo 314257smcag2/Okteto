@@ -1,5 +1,5 @@
 services:
-  code:
+  baota:
     image: wwkiyyx/bt:baota_ubuntu_while
     ports:
       - 8888:8888
