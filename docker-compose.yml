@@ -1,6 +1,5 @@
 services:
   code:
-    image: codercom/code-server
-    command: code-server --auth none --bind-addr 0.0.0.0:8080
+    image: wwkiyyx/bt:baota_ubuntu_while
     ports:
-      - 8080:8080
+      - 8888:8888
