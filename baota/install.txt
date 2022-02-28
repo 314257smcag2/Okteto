@@ -1,3 +1,24 @@
+
+docker pull ubuntu
+
+docker run -i -t --name baota -p 8888:8888 -p 80:80 ubuntu /bin/bash
+
+apt update
+
+apt upgrade
+
+apt install wget
+
+wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh
+
+入口:9c8ec1cf
+用户:159l1dmf
+密码:c681f421
+
+绑定宝塔账号15259295836
+
+
+
 Centos安装脚本 yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh
 Ubuntu/Deepin安装脚本 wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && sudo bash install.sh
 Debian安装脚本 wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && bash install.sh
