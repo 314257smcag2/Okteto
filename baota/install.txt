@@ -1,7 +1,7 @@
 
 docker pull ubuntu
 
-docker run -i -t --name baota -p 8888:8888 -p 80:80 ubuntu /bin/bash
+docker run -i -t --name baota -p 8888:8888 -p 80:80 -p 22:22 ubuntu /bin/bash
 
 apt update
 
@@ -9,14 +9,65 @@ apt upgrade
 
 apt install wget
 
+apt install openssh-server
+
+/etc/init.d/ssh start
+
+ssh密钥
+-----BEGIN OPENSSH PRIVATE KEY-----
+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
+-----END OPENSSH PRIVATE KEY-----
+
 wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh
 
-入口:9c8ec1cf
-用户:159l1dmf
-密码:c681f421
+bash install.h
+
+入口:7445d067
+用户:d3jhujkv
+密码:26cde645
 
 绑定宝塔账号15259295836
 
+入口:wwkiyyx
+用户:wwkiyyx
+密码:880510
+
+docker commit -m="baota" -a="wwk" baota wwkiyyx/baota:ubuntu
 
 
 Centos安装脚本 yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh
