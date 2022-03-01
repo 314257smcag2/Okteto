@@ -82,13 +82,13 @@
 
  services:
   ttyd1:
-    image: tsl0922/tthd
+    image: tsl0922/ttyd
     ports:
       - 7681:7681
       
  services:
   ttyd2:
-    image: cloudve/tthd
+    image: cloudve/ttyd
     ports:
       - 7681:7681
 
