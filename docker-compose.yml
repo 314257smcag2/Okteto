@@ -7,8 +7,8 @@ services:
   ttyd1:
     image: tsl0922/ttyd
     ports:
-      - 7682:7681
+      - 7681:7681
   ttyd2:
     image: cloudve/ttyd
     ports:
-      - 7683:7681
+      - 7681:7681
