@@ -5,10 +5,10 @@ services:
       - 8888:8888
       - 80:80
   ttyd1:
-    image: tsl0922/tthd
+    image: wwkiyyx/tthd:tsl0922
     ports:
       - 7682:7681
   ttyd2:
-    image: cloudve/tthd
+    image: wwkiyyx/tthd:cloudve
     ports:
       - 7683:7681
