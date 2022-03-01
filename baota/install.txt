@@ -27,8 +27,9 @@ docker push wwkiyxx/baota:ubuntu
 
 docker pull wwkiyyx/baota:ubuntu
 
-docker run -i -t --name baota1 -p 8888:8888 -p 80:80 wwkiyyx/baota:ubuntu /bin/sh -c "/etc/init.d/ssh start; bt 1; bt"  这个卡
-docker run -i -t --name baota1 -p 8888:8888 -p 80:80 wwkiyyx/baota:ubuntu /bin/sh -c "/etc/init.d/ssh start; bt 1; top" 这个更好
+docker run -i -t --name baota1 -p 8888:8888 -p 80:80 wwkiyyx/baota:ubuntu /bin/sh -c "/etc/init.d/ssh start; bt 1; bt"  okteto不能用bt，失败
+docker run -i -t --name baota1 -p 8888:8888 -p 80:80 wwkiyyx/baota:ubuntu /bin/sh -c "/etc/init.d/ssh start; bt 1; top" okteto不能用top，失败
+docker run -d --name baota1 -p 8888:8888 -p 80:80 wwkiyyx/baota:ubuntu /bin/sh -c "/etc/init.d/ssh start; bt 1; while true; do sleep 100; done" 只能用这个了
 
 docker commit -m="baota1" -a="wwkiyyx" baota1 wwkiyyx/baota:ubuntu1
 
@@ -38,49 +39,11 @@ docker pull wwkiyyx/baota:ubuntu1
 
 确定做到这一步，play with docker 空间太小，不能安装LNMP
 
------BEGIN OPENSSH PRIVATE KEY-----
-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
------END OPENSSH PRIVATE KEY-----
-
-
-
 绑定宝塔账号15259295836
 
+启用SSH权限
+
+修改登录
 入口:wwkiyyx
 用户:wwkiyyx
 密码:880510

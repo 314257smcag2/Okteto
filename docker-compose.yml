@@ -4,3 +4,11 @@ services:
     ports:
       - 8888:8888
       - 80:80
+  ttyd1:
+    image: tsl0922/tthd
+    ports:
+      - 7681:7681
+  ttyd2:
+    image: cloudve/tthd
+    ports:
+      - 7681:7681
