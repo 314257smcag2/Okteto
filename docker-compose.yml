@@ -5,7 +5,7 @@ services:
       - 8888:8888
       - 80:80
   ttyd:
-    image: wwkiyyx/ubuntu
+    image: wwkiyyx/ttyd:ubuntu1
     ports:
       - 7681:7681
   ttyd1:
