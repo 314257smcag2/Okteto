@@ -4,6 +4,10 @@ services:
     ports:
       - 8888:8888
       - 80:80
+  ttyd:
+    image: wwkiyyx/ubuntu
+    ports:
+      - 7681:7681
   ttyd1:
     image: tsl0922/ttyd
     ports:
