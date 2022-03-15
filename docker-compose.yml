@@ -16,3 +16,8 @@ services:
     image: cloudve/ttyd
     ports:
       - 7681:7681
+  code:
+    image: codercom/code-server
+    command: cat ./.config/code-server/config.yaml
+    ports:
+      - 8080:8080
