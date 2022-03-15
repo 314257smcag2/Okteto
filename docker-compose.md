@@ -78,6 +78,8 @@
 
 ### vscode
 
+ - 3e872a66951f52dcae42e84b
+
 ### ttyd
 
  services:
