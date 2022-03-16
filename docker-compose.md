@@ -70,6 +70,12 @@
       
 ### baota
 
+  baota:
+    image: wwkiyyx/baota:ubuntu1
+    ports:
+      - 8888:8888
+      - 80:80
+
 ### mysql
 
 ### redis
@@ -83,12 +89,14 @@
 ### ttyd
 
  services:
+  ttyd:
+    image: wwkiyyx/ttyd:ubuntu1
+    ports:
+      - 7681:7681
   ttyd1:
     image: tsl0922/ttyd
     ports:
       - 7681:7681
-      
- services:
   ttyd2:
     image: cloudve/ttyd
     ports:

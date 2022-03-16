@@ -1,21 +1,4 @@
 services:
-  baota:
-    image: wwkiyyx/baota:ubuntu1
-    ports:
-      - 8888:8888
-      - 80:80
-  ttyd:
-    image: wwkiyyx/ttyd:ubuntu1
-    ports:
-      - 7681:7681
-  ttyd1:
-    image: tsl0922/ttyd
-    ports:
-      - 7681:7681
-  ttyd2:
-    image: cloudve/ttyd
-    ports:
-      - 7681:7681
   code:
     image: wwkiyyx/vscode:codeserver
     ports:
