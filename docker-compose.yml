@@ -20,10 +20,6 @@ services:
     image: wwkiyyx/vscode:codeserver
     ports:
       - 8080:8080
-  nextcloud:
-    image: nextcloud
-    ports:
-      - 8080:80
   owncloud:
     image: owncloud:8.1
     ports:
@@ -36,10 +32,10 @@ services:
   ubuntuxfce:
     image: consol/ubuntu-xfce-vnc
     ports:
-      - 5901:5901
-      - 6901:6901
+      - 8901:5901
+      - 9901:6901
   centosxfce:
     image: consol/centos-xfce-vnc
     ports:
-      - 5901:5901
-      - 6901:6901
+      - 8901:5901
+      - 9901:6901
