@@ -107,3 +107,9 @@
 ## volumes 存储
 
 ## 网络
+
+    
+  owncloud:     
+    image: owncloud:8.1    
+    ports:     
+      - 8080:80    

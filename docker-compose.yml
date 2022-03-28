@@ -3,10 +3,6 @@ services:
     image: wwkiyyx/vscode:codeserver
     ports:
       - 8080:8080
-  owncloud:
-    image: owncloud:8.1
-    ports:
-      - 8080:80
   ubuntulxde:
     image: dorowu/ubuntu-desktop-lxde-vnc
     ports:
