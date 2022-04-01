@@ -84,8 +84,8 @@
 
 ### vscode
 
- - 3e872a66951f52dcae42e84b
- - 1e4f218a91f701b18d4d5af4
+ - wwkiyyx/vscode:codeserver 密码 3e872a66951f52dcae42e84b
+ - wwkiyyx/vscode:rooter 密码 1e4f218a91f701b18d4d5af4
 
 ### ttyd
 
