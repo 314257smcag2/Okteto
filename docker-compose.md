@@ -85,6 +85,7 @@
 ### vscode
 
  - 3e872a66951f52dcae42e84b
+ - 1e4f218a91f701b18d4d5af4
 
 ### ttyd
 
