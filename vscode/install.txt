@@ -6,17 +6,25 @@ docker exec -it coder /bin/bash
 
 python3
 file = open('/root/.config/code-server/.config.yaml', mode='w')
-file.write('bind-addr: 127.0.0.1:8080 \n auth: password \n password: 880510 \n cert: false \n')
+file.write('bind-addr: 127.0.0.1:8080\nauth: password\npassword: 880510\ncert: false\n')
 file.close()
 
 docker commit -m="880510" -a="wwkiyyx" coder wwkiyyx/vscode:root880510
 
 docker push wwkiyyx/vscode:root880510
 
-apt-get install libglib2.0-dev
+
 
 apt-get update
 
 apt-get upgrade
 
 apt-get install python3-pip
+
+git clone https://github.com/ultralytics/yolov3
+
+cd yolov3
+
+pip install -r requirments.txt
+
+apt-get install libglib2.0-dev
