@@ -1,6 +1,6 @@
 services:
   code:
-    image: wwkiyyx/vscode:rooter
+    image: wwkiyyx/vscode:root880510
     ports:
       - 8080:8080
   ubuntulxde:
