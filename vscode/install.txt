@@ -12,3 +12,11 @@ file.close()
 docker commit -m="880510" -a="wwkiyyx" coder wwkiyyx/vscode:root880510
 
 docker push wwkiyyx/vscode:root880510
+
+apt-get install libglib2.0-dev
+
+apt-get update
+
+apt-get upgrade
+
+apt-get install python3-pip

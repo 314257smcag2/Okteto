@@ -84,8 +84,18 @@
 
 ### vscode
 
- - wwkiyyx/vscode:codeserver 密码 3e872a66951f52dcae42e84b
- - wwkiyyx/vscode:rooter 密码 1e4f218a91f701b18d4d5af4
+services:     
+  code:    
+    image: codercom/code-server   
+    ports:        
+      - 8080:8080             
+
+services:     
+  code:    
+    image: codercom/code-server     
+    command: code-server --auth none --bind-addr 0.0.0.0:8080     
+    ports:        
+      - 8080:8080          
 
 ### ttyd
 
