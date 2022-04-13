@@ -4,11 +4,9 @@ services:
     ports:
       - 8080:8080
   code:
-    image: wwkiyyx/vscode:yolo
+    image: wwkiyyx/vscode:root880510
     ports:
       - 8080:8080
-    volumes:
-      - files:/home/coder
   ubuntulxde:
     image: dorowu/ubuntu-desktop-lxde-vnc
     ports:
@@ -24,8 +22,3 @@ services:
     ports:
       - 8901:5901
       - 9901:6901
-
-volumes:
-  files:
-    driver_opts:
-      size: 5Gi
