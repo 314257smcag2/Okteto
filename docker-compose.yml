@@ -1,4 +1,8 @@
 services:
+  yolov3:
+    build: .
+    ports:
+      - 8080:8080
   code:
     image: wwkiyyx/vscode:yolo
     ports:
