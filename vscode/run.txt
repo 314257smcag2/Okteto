@@ -1,0 +1,19 @@
+# code server        
+
+https://github.com/coder/code-server/releases/download/v4.1.0/code-server_4.1.0_amd64.deb         
+https://github.com/coder/code-server/releases/download/v4.1.0/code-server-4.1.0-amd64.rpm        
+https://github.com/coder/code-server/releases/download/v4.1.0/code-server-4.1.0-linux-amd64.tar.gz       
+tar xf vscode.tar.gz        
+./code-server --port 8080 --host 0.0.0.0 --auth password          
+
+curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run            
+curl -fsSL https://code-server.dev/install.sh | sh            
+https://github.com/coder/code-server/blob/main/install.sh         
+
+wget https://github.com/cdr/code-server/releases/download/1.1156-vsc1.33.1/code-server1.1156-vsc1.33.1-linux-x64.tar.gz         
+tar -xzvf code-server1.1156-vsc1.33.1-linux-x64.tar.gz         
+cd code-server1.1156-vsc1.33.1-linux-x64        
+chmod -R 777 code-server       
+./code-server          
+
+play with docker 访问不了      

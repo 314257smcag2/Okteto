@@ -1,0 +1,32 @@
+# theia       
+
+make     
+gcc (or another compiling toolchain)      
+pkg-config    
+build-essential: sudo apt-get install build-essential     
+native-keymap native node module dependencies:     
+Debian-based: sudo apt-get install libx11-dev libxkbfile-dev     
+Red Hat-based: sudo yum install libX11-devel.x86_64 libxkbfile-devel.x86_64 # or .i686     
+FreeBSD: sudo pkg install libX11     
+keytar native node module dependencies (reference):    
+Debian/Ubuntu: sudo apt-get install libsecret-1-dev    
+Red Hat-based: sudo yum install libsecret-devel    
+Arch Linux: sudo pacman -S libsecret     
+Alpine: apk add libsecret-dev    
+
+docker run -i -t -u root --name theia -p 3000:3000 node /bin/bash     
+
+apk add libsecret-dev libx11-dev libxkbfile-dev      
+
+git clone https://github.com/eclipse-theia/theia \     搞不了     
+    && cd theia \       
+    && yarn \    
+    && yarn download:plugins \       
+    && yarn browser build \    
+    && yarn browser start        
+Start your browser on http://localhost:3000.      
+    
+yarn browser start ../.. --hostname 0.0.0.0         
+
+npm install --global yarn        
+
