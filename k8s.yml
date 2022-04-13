@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-yolov3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-yolov3
+  template:
+    metadata:
+      labels:
+        app: hello-yolov3
+    spec:
+      containers:
+      - image: ultralytics/yolov3:latest
+        name: hello-yolov3
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-yolov3
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  type: ClusterIP  
+  ports:
+  - name: "hello-yolov3"
+    port: 8080
+  selector:
+    app: hello-yolov3
