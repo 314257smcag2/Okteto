@@ -8,13 +8,3 @@ services:
     ports:
       - 8080:80
       - 5900:5900
-  ubuntuxfce:
-    image: consol/ubuntu-xfce-vnc
-    ports:
-      - 8901:5901
-      - 9901:6901
-  centosxfce:
-    image: consol/centos-xfce-vnc
-    ports:
-      - 8901:5901
-      - 9901:6901
