@@ -244,6 +244,24 @@ chmod u+x ttyd
     ports:
       - 7681:7681
 ```
+### vnc
+```
+  ubuntulxde:
+    image: dorowu/ubuntu-desktop-lxde-vnc
+    ports:
+      - 8080:80
+      - 5900:5900
+  ubuntuxfce:
+    image: consol/ubuntu-xfce-vnc
+    ports:
+      - 8901:5901
+      - 9901:6901
+  centosxfce:
+    image: consol/centos-xfce-vnc
+    ports:
+      - 8901:5901
+      - 9901:6901
+```
 ### ruoyi
  - spring-boot : https://gitee.com/y_project/RuoYi
  - vue : https://gitee.com/y_project/RuoYi-Vue
