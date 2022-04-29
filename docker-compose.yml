@@ -1,5 +1,9 @@
 services:
-  code:
+  code_push:
+    image: wwkiyyx/vscode:root880510
+    ports:
+      - 8080:8080
+  code_keep:
     image: wwkiyyx/vscode:root880510
     ports:
       - 8080:8080
