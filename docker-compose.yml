@@ -1,12 +1,21 @@
 services:
-  code_push:
+  baota:
+    image: wwkiyyx/baota:ubuntu1
+    ports:
+      - 8888:8888
+      - 80:80
+  code:
     image: wwkiyyx/vscode:root880510
     ports:
       - 8080:8080
-  code_keep:
-    image: wwkiyyx/vscode:root880510
+  juputer:
+    image: wwkiyyx/okteto:jupyter
     ports:
-      - 8080:8080
+      - 8888:8888
+  ttyd:
+    image: wwkiyyx/ttyd:ubuntu1
+    ports:
+      - 7681:7681
   ubuntulxde:
     image: dorowu/ubuntu-desktop-lxde-vnc
     ports:
