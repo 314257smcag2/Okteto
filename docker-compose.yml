@@ -4,15 +4,13 @@ services:
     ports:
       - 8888:8888
       - 80:80
-  code-server:
+  vscode-server:
     image: wwkiyyx/vscode:root880510
     ports:
-      - 80:80
       - 8080:8080
   okteto-juputer:
     image: wwkiyyx/okteto:jupyter
     ports:
-      - 80:80
       - 8888:8888
   ttyd:
     image: wwkiyyx/ttyd:ubuntu1
