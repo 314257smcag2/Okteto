@@ -102,6 +102,23 @@ services:
 ```
 ### appnode
  - docker pull sbwml/appnode
+```
+ docker run -dit --restart=always \
+    --privileged \
+    --cap-add SYS_ADMIN \
+    -e container=docker \
+    --network bridge \
+    -p 8888:8888 \
+    -p 443:443 \
+    -p 80:80 \
+    -v /data:/data \
+    --name appnode \
+    sbwml/appnode:latest \
+    /usr/sbin/init
+账户：admin
+密码：admin
+端口：8888
+```
 ### mysql
 ```
 version: '3.1'
