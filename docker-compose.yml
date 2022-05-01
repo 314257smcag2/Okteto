@@ -4,12 +4,12 @@ services:
     ports:
       - 8888:8888
       - 80:80
-  code:
+  code-server:
     image: wwkiyyx/vscode:root880510
     ports:
       - 80:80
       - 8080:8080
-  juputer:
+  okteto-juputer:
     image: wwkiyyx/okteto:jupyter
     ports:
       - 80:80
@@ -18,7 +18,7 @@ services:
     image: wwkiyyx/ttyd:ubuntu1
     ports:
       - 7681:7681
-  ubuntulxde:
+  ubuntu-desktop-lxde-vnc:
     image: dorowu/ubuntu-desktop-lxde-vnc
     ports:
       - 8080:80
