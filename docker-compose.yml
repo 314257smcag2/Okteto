@@ -5,7 +5,8 @@ services:
       - 8888:8888
       - 80:80
   appnode:
-    image: sbwml/appnode
+    image: wwkiyyx/baota:appnode1
+    command: /usr/sbin/init
     privileged: true
     ports:
       - 8888:8888
