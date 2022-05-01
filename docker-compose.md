@@ -100,6 +100,8 @@ services:
 初始账号 username
 初始密码 password
 ```
+### appnode
+ - docker pull sbwml/appnode
 ### mysql
 ```
 version: '3.1'
@@ -258,6 +260,11 @@ chmod u+x ttyd
       - 9901:6901
   centosxfce:
     image: consol/centos-xfce-vnc
+    ports:
+      - 8901:5901
+      - 9901:6901
+  xfce:
+    image: christian773/xfce-vnc
     ports:
       - 8901:5901
       - 9901:6901
