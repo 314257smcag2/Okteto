@@ -5,7 +5,7 @@ services:
       - 8888:8888
       - 80:80
   appnode:
-    image: wwkiyyx/baota:appnode1
+    image: sbwml/appnode
     privileged: true
     ports:
       - 8888:8888
