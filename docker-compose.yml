@@ -8,7 +8,7 @@ services:
     image: wwkiyyx/vscode:root880510
     ports:
       - 80:80
-      - 8888:8888
+      - 8080:8080
   juputer:
     image: wwkiyyx/okteto:jupyter
     ports:
@@ -22,5 +22,4 @@ services:
     image: dorowu/ubuntu-desktop-lxde-vnc
     ports:
       - 8080:80
-      - 8888:8888
       - 5900:5900
