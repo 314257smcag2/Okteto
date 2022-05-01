@@ -4,13 +4,6 @@ services:
     ports:
       - 8888:8888
       - 80:80
-  appnode:
-    image: sbwml/appnode
-    command: /usr/sbin/init
-    privileged: true
-    ports:
-      - 8888:8888
-      - 80:80
   code:
     image: wwkiyyx/vscode:root880510
     ports:

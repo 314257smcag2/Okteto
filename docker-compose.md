@@ -102,6 +102,7 @@ services:
 ```
 ### appnode
  - docker pull sbwml/appnode
+ - wget http://dl.appnode.com/install-ccenter-x86_64
 ```
  docker run -dit --restart=always \
     --privileged \
