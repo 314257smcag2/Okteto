@@ -6,6 +6,7 @@ services:
       - 80:80
   appnode:
     image: wwkiyyx/baota:appnode1
+    privileged: true
     ports:
       - 8888:8888
       - 80:80
