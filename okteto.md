@@ -23,6 +23,11 @@
  - https://github.com/okteto/tensorflow-notebook-getting-started
 
 ```
+
+Linux 下载安装脚本 : curl https://get.okteto.com -sSfL | sh
+
+okteto context use https://cloud.okteto.com
+
 cd /root
 export OKTETO_TOKEN=PIvcZLzke6uwKVnuyfu8605hYjW7eqMbjClM3Xv2V8yJaRcB
 okteto version
