@@ -21,4 +21,17 @@
  - https://github.com/okteto/java-maven-getting-started
  - https://github.com/okteto/spring-microservices
  - https://github.com/okteto/tensorflow-notebook-getting-started
- - 
+
+```
+cd /root
+export OKTETO_TOKEN=PIvcZLzke6uwKVnuyfu8605hYjW7eqMbjClM3Xv2V8yJaRcB
+okteto version
+okteto context list
+okteto namespace wwkiyyx
+okteto namespace a-wwkiyyx
+okteto namespace b-wwkiyyx
+okteto namespace c-wwkiyyx
+okteto namespace d-wwkiyyx
+okteto up
+okteto down
+```
