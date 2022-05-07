@@ -5,7 +5,7 @@ Description=yolov3_spp
 ExecStart=/usr/bin/python3 /home/coder/yolov3/yolov3_spp.py
 
 
-
+apt-get install systemctl
 systemctl start yolo.service
 
 
@@ -15,12 +15,8 @@ systemctl stop test.service 停止服务
 systemctl status test.service 查看服务状态
 systemctl reload test.service 重新加载服务
 systemctl daemon-load 重新加载后台服务
-————————————————
-版权声明：本文为CSDN博主「阿狸的情书」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/qq_17802895/article/details/108227292
 
 
-apt-get install systemctl
 systemctl list-units --type=service： 列出正在运行的服务
 
 
