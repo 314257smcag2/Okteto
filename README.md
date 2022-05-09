@@ -15,3 +15,4 @@
  
 If Okteto is not able to detect how to deploy your application, or you want to have more control over it, you can setup an Okteto Pipeline by adding a okteto-pipeline.yml or .okteto/okteto-pipeline.yml file to the root of your repository.      
 
+1
