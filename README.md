@@ -15,4 +15,10 @@
  
 If Okteto is not able to detect how to deploy your application, or you want to have more control over it, you can setup an Okteto Pipeline by adding a okteto-pipeline.yml or .okteto/okteto-pipeline.yml file to the root of your repository.      
 
-1
+ ## 网页图片框选工具
+
+ - https://fengyuanchen.github.io/cropperjs/
+ - https://github.com/fengyuanchen/cropperjs
+ - https://github.com/tapmodo/Jcrop
+ - https://jcrop.com/
+ - http://code.ciaoca.com/jquery/jcrop/demo/preview
