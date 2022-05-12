@@ -51,7 +51,7 @@ if ($openid != null)
         $resultStr = sprintf($textTpl,$fromUsername,$toUsername,$time,$msgType,$token);
         echo $resultStr;
     }
-    elseif ($content == "1")
+    elseif ($content == "1" || $content == "2" || $content == "3" || $content == "4")
     {
         $textTpl = "<xml>
         <ToUserName><![CDATA[%s]]></ToUserName>
@@ -61,12 +61,24 @@ if ($openid != null)
         <Content><![CDATA[%s]]></Content>
         </xml>"; 
         
-        $file = fopen("token.txt","r");
-        $token = fread($file,filesize("token.txt"));
-        fclose($file);
+        $tokenfile = fopen("token.txt","r");
+        $token = fread($tokenfile,filesize("token.txt"));
+        fclose($tokenfile);
         
         $up = "https://api.weixin.qq.com/cgi-bin/media/upload?access_token=".$token."&type=image";
-        $file = "/www/wwwroot/www.xiaomi.com/xiaomi/image.jpg";
+        $file = "/www/wwwroot/www.xiaomi.com/xiaomi/uoogou.jpg";
+        if ($content == "2")
+        {
+            $file = "/www/wwwroot/www.xiaomi.com/xiaomi/gionee.jpg";
+        }
+        elseif($content == "3")
+        {
+            $file = "/www/wwwroot/www.xiaomi.com/xiaomi/uoogou_yolov3_spp.jpg";
+        }
+        elseif($content == "4")
+        {
+            $file = "/www/wwwroot/www.xiaomi.com/xiaomi/gionee_yolov5x.jpg";
+        }
         $ch = curl_init();
         if (class_exists('\CURLFile')) {
             curl_setopt($ch, CURLOPT_SAFE_UPLOAD, true);
@@ -94,51 +106,8 @@ if ($openid != null)
         $resultStr = sprintf($textTpl,$fromUsername,$toUsername,$time,$msgType,$mediaid);
         echo $resultStr;
     }
-    elseif ($content == "2")
-    {
-        $textTpl = "<xml>
-        <ToUserName><![CDATA[%s]]></ToUserName>
-        <FromUserName><![CDATA[%s]]></FromUserName>
-        <CreateTime>%s</CreateTime>
-        <MsgType><![CDATA[%s]]></MsgType>
-        <Content><![CDATA[%s]]></Content>
-        </xml>"; 
-        
-        $file = fopen("token.txt","r");
-        $token = fread($file,filesize("token.txt"));
-        fclose($file);
-        
-        $up = "https://api.weixin.qq.com/cgi-bin/media/upload?access_token=".$token."&type=image";
-        $file = "/www/wwwroot/www.xiaomi.com/xiaomi/image1.jpg";
-        $ch = curl_init();
-        if (class_exists('\CURLFile')) {
-            curl_setopt($ch, CURLOPT_SAFE_UPLOAD, true);
-            $file = array('media' => new \CURLFile($file));//>=5.5
-        } else {
-            if (defined('CURLOPT_SAFE_UPLOAD')) {
-                curl_setopt($ch, CURLOPT_SAFE_UPLOAD, false);
-            }
-            $file = array('media' => '@' . realpath($file));//<=5.5
-        }
-        curl_setopt($ch, CURLOPT_URL, $up);
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $file);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_USERAGENT, "TEST");
-        $result = curl_exec($ch);
-        curl_close($ch);
-        $image = json_decode($result, true);
-        $mediaid = $image["media_id"];
-        
-        $file1 = fopen("mediaid.txt","w");
-        fwrite($file1,$mediaid);
-        fclose($file1);
-        
-        $resultStr = sprintf($textTpl,$fromUsername,$toUsername,$time,$msgType,$mediaid);
-        echo $resultStr;
-        
-    }
-    elseif ($content == "3")
+    
+    elseif ($content == "9")
     {
         $textTpl = "<xml>
         <ToUserName><![CDATA[%s]]></ToUserName>
@@ -155,6 +124,20 @@ if ($openid != null)
         fclose($file);
         
         $resultStr = sprintf($textTpl,$fromUsername,$toUsername,$time,$mediaid);
+        echo $resultStr;
+    }
+    elseif ($content == "T")
+    {
+        $textTpl = "<xml>
+        <ToUserName><![CDATA[%s]]></ToUserName>
+        <FromUserName><![CDATA[%s]]></FromUserName>
+        <CreateTime>%s</CreateTime>
+        <MsgType><![CDATA[%s]]></MsgType>
+        <Content><![CDATA[%s]]></Content>
+        </xml>"; 
+        
+        $contentStr = "uoogou : ".date("H:i:s",filemtime("/www/wwwroot/www.xiaomi.com/xiaomi/uoogou.jpg"))." | gionee : ".date("H:i:s",filemtime("/www/wwwroot/www.xiaomi.com/xiaomi/gionee.jpg"));
+        $resultStr = sprintf($textTpl,$fromUsername,$toUsername,$time,$msgType,$contentStr);
         echo $resultStr;
     }
     else 

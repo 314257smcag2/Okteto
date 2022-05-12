@@ -95,7 +95,5 @@ RUN apt update \
 ```     
 --------------------------------------------------------------           
 
-docker pull ubuntu         
-docker pull centos       
 
      
