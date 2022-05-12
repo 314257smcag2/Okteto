@@ -1,0 +1,57 @@
+
+docker pull ubuntu
+
+docker run -i -t --name baota -p 8888:8888 -p 80:80 -p 22:22 ubuntu /bin/bash
+
+apt update
+
+apt upgrade
+
+apt install wget
+
+apt install openssh-server
+
+/etc/init.d/ssh start
+
+wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh
+
+bash install.h
+
+入口:7445d067
+用户:d3jhujkv
+密码:26cde645
+
+docker commit -m="baota" -a="wwkiyyx" baota wwkiyyx/baota:ubuntu
+
+docker push wwkiyxx/baota:ubuntu
+
+docker pull wwkiyyx/baota:ubuntu
+
+docker run -i -t --name baota1 -p 8888:8888 -p 80:80 wwkiyyx/baota:ubuntu /bin/sh -c "/etc/init.d/ssh start; bt 1; bt"  okteto不能用bt，失败
+docker run -i -t --name baota1 -p 8888:8888 -p 80:80 wwkiyyx/baota:ubuntu /bin/sh -c "/etc/init.d/ssh start; bt 1; top" okteto不能用top，失败
+docker run -d --name baota1 -p 8888:8888 -p 80:80 wwkiyyx/baota:ubuntu /bin/sh -c "/etc/init.d/ssh start; bt 1; while true; do sleep 100; done" 只能用这个了
+
+docker commit -m="baota1" -a="wwkiyyx" baota1 wwkiyyx/baota:ubuntu1
+
+docker push wwkiyxx/baota:ubuntu1
+
+docker pull wwkiyyx/baota:ubuntu1
+
+确定做到这一步，play with docker 空间太小，不能安装LNMP
+
+绑定宝塔账号15259295836
+
+启用SSH权限
+
+修改登录
+入口:wwkiyyx
+用户:wwkiyyx
+密码:880510
+
+
+
+
+Centos安装脚本 yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh
+Ubuntu/Deepin安装脚本 wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && sudo bash install.sh
+Debian安装脚本 wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && bash install.sh
+Fedora安装脚本 wget -O install.sh http://download.bt.cn/install/install_6.0.sh && bash install.sh
