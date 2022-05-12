@@ -22,6 +22,18 @@
  - https://github.com/okteto/spring-microservices
  - https://github.com/okteto/tensorflow-notebook-getting-started
 
+## play with docker 
+
+ - docker pull wwkiyyx/baota:ubuntu
+ - docker run -d --name baota1 -p 8888:8888 -p 80:80 wwkiyyx/baota:ubuntu /bin/sh -c "/etc/init.d/ssh start; bt 1; while true; do sleep 100; done"
+ - 安装nginx、PHP、okteto-cli
+ - docker commit -m="baota" -a="wwkiyyx" baota wwkiyyx/okteto:baota
+ - docker push wwkiyxx/okteto:baota
+```
+入口:wwkiyyx
+用户:wwkiyyx
+密码:880510
+```
 ```
 
 Linux 下载安装脚本 : curl https://get.okteto.com -sSfL | sh
