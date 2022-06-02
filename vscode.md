@@ -118,21 +118,21 @@ electron/resources/app
  - mysql-8.0.19-winx64.zip  
  - Path=bin  
  - my.ini  
- > \[mysqld\]  
- > basedir=E:\\\SQL\\\MySQL\\\mysql-8.0.16-winx64  
- > datadir=E:\\\SQL\\\MySQL\\\mysql-8.0.16-winx64\\\data  
+ > \[mysqld\]     
+ > basedir=E:\\\SQL\\\MySQL\\\mysql-8.0.16-winx64      
+ > datadir=E:\\\SQL\\\MySQL\\\mysql-8.0.16-winx64\\\data      
 
  - mysqld --initialize 创建data 临时密码在data\err  
  - mysqld --install [服务名]=mysql  
  - net start mysql  
  - net stop mysql  
  - mysql -u root -p  
- > ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '新密码'  
+ > ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '新密码'       
  - 意外情况 mysqld --console 全自动启动 关闭后失效  
- > create database xxxx;  
- > use xxx;  
- > drop database xxx;  
- > show tables;  
+ > create database xxxx;     
+ > use xxx;     
+ > drop database xxx;    
+ > show tables;      
  > source xxxxxxxxxxxxxxx.sql 或者粘贴执行      
 
 ### Linux
@@ -140,9 +140,9 @@ electron/resources/app
  - service mysql start
  - service mysql stop
  - mysql -u root
- > CREATE USER 'wwk'@'localhost' IDENTIFIED BY '880510';
- > GRANT privileges ON databasename.tablename TO 'username'@'host'
- > GRANT ALL ON ry.* TO 'wwk'@'localhost';
+ > CREATE USER 'wwk'@'localhost' IDENTIFIED BY '880510';     
+ > GRANT privileges ON databasename.tablename TO 'username'@'host'     
+ > GRANT ALL ON ry.* TO 'wwk'@'localhost';     
 
 ## Redis
 
